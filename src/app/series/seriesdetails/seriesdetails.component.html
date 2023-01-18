@@ -1,0 +1,40 @@
+<div class="row position-relative my-5">
+  <div class="col-lg-4 text-center">
+      <img [src]=" ('https://image.tmdb.org/t/p/w500' + series.poster_path)  || 'shady' " class="img-fluid" alt="alt" />
+  </div>
+  <div class="col-lg-8">
+      <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-lg-6">
+              <h4 class="py-2 my-3">{{series.name == undefined ? series.title : series.name}}</h4>
+          </div>
+          <div class="col-lg-4">
+              <div class="rate">
+                  <img src="assets/imgs/IMDB_Logo_2016.svg" class="imdb" alt="imdb">
+                  <span>{{series.vote_average}}</span>
+              </div>
+          </div>
+          <div class="col-lg-2"></div>
+
+      </div>
+      <div class="details my-3">
+          <h5>Description</h5>
+          <span class="text-muted w-75 d-block">{{series.overview}}</span>
+      </div>
+      <div class="trailer my-4 d-flex justify-content-start align-items-center ">
+          <h5 class="me-3">Release Date :</h5>
+          <h5 class="text-muted">{{series.first_air_date}}</h5>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <h5>Trailer <span class="text-muted" style="font-size: 12px;">Using Youtube Data API</span></h5>
+            <iframe [src]='"https://www.youtube.com/embed/" + theId | safe'  id="iframe" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+
+  </div>
+</div>

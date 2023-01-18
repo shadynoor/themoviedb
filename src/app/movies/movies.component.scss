@@ -1,0 +1,65 @@
+@import '../../styles.scss';
+
+header{
+    position: relative;
+}
+header::after , header::before{
+    content: "";
+    position: absolute;
+    height: $borderHeight;
+    background-color: $borderColor;
+    width: 25%;
+    margin: 20px 0;
+}
+header::after{
+    top: -40px;
+    left: 0;
+}
+header::before{
+    top: 100px;
+    right: 50px;
+}
+.page-link{
+    color: $bgColor;
+    cursor: pointer;
+}
+.active{
+    color: white;
+}
+.search{
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+@media (max-width:767px) {
+  .search{
+    width: 100%;
+  }
+  .paginate{
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
+}
+}
+// .barr{
+//     position: relative;
+// }
+// .btnn{
+//     color: black;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     height: 100%;
+//     border: none;
+//     outline: none;
+//     background-color: white;
+//     border-radius: 0 6px 6px 0;
+//     -webkit-border-radius: 0 6px 6px 0;
+//     -moz-border-radius: 0 6px 6px 0;
+//     -ms-border-radius: 0 6px 6px 0;
+//     -o-border-radius: 0 6px 6px 0;
+//     border: 1px solid #ced4da;
+//     border-left: none;
+// }

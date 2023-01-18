@@ -1,0 +1,45 @@
+@import '../../styles.scss';
+
+header{
+    position: relative;
+}
+header::after , header::before{
+    content: "";
+    position: absolute;
+    height: $borderHeight;
+    background-color: $borderColor;
+    width: 25%;
+    margin: 20px 0;
+}
+header::after{
+    top: -40px;
+    left: 0;
+}
+header::before{
+    top: 100px;
+    right: 50px;
+}
+.page-link{
+    color: $bgColor;
+    cursor: pointer;
+}
+.active{
+    color: white;
+}
+.search{
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+@media (max-width:767px) {
+  .search{
+    width: 100%;
+  }
+  .paginate{
+    transform: scale(.7);
+    -webkit-transform: scale(.7);
+    -moz-transform: scale(.7);
+    -ms-transform: scale(.7);
+    -o-transform: scale(.7);
+  }
+}

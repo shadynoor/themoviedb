@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="spinn mt-5 d-flex justify-content-center align-items-center" *ngIf="isLoading">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
+  <div class="row" *ngIf="!isLoading">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <form class="form-group mt-5" [formGroup]="contactsForm" (ngSubmit)="submit()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Email</label>
+            <input type="text" formControlName="name" class="form-control" id="name" placeholder="Please Enter Your Email">
+            <p class="text-danger" *ngIf="contactsForm.controls.name.invalid && contactsForm.controls.name.touched">You have to add your email</p>
+          </div>
+          <div class="mb-3">
+            <label for="Message" class="form-label">Message</label>
+            <textarea class="form-control" formControlName="message" id="Message" rows="3" placeholder="Please Enter Your Message"></textarea>
+            <p class="text-danger" *ngIf="contactsForm.controls.message.invalid && contactsForm.controls.message.touched">You Can't Send Empty Message</p>
+          </div>
+          <button class="btn btn-primary" type="submit" [disabled]="!contactsForm.valid">Submit</button>
+    </form>
+
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+
+
+</div>
