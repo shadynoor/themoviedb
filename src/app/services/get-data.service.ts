@@ -40,7 +40,7 @@ export class GetDataService {
    }
 
    getTheTrailer(name:string):Observable<any>{
-    return this._HttpClient.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyCwpmIWr4287QK7VlK7_LetuyX4B46RWOk&type=video&part=snippet&maxResults=1&q=${name}+trailer`)
+    return this._HttpClient.get(`https://www.googleapis.com/youtube/v3/search?key=/Google API Key/_LetuyX4B46RWOk&type=video&part=snippet&maxResults=1&q=${name}+trailer`)
    }
 
 }
